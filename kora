@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title> 
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body class="bg-pink-200 flex items-center justify-center h-screen">
+    <div class="text-center p-6 max-w-lg bg-white rounded-2xl shadow-xl">
+        <h1 class="text-4xl font-bold text-pink-600">🎉 Happy Birthday! 🎂</h1>
+        <p class="mt-4 text-lg text-gray-700">Wishing you a fantastic year filled with love, joy, and happiness! 🎈</p>
+        
+        <div class="mt-6">
+            <img src="https://source.unsplash.com/300x200/?birthday" alt="Birthday Image" class="rounded-lg shadow-md">
+        </div>
+        
+        <button id="surprise-btn" class="mt-6 px-6 py-2 bg-pink-500 text-white font-bold rounded-lg hover:bg-pink-700 transition">Click for Surprise</button>
+        
+        <p id="surprise-msg" class="mt-4 text-lg text-purple-600 font-semibold hidden">🎁 You are amazing! Have a magical birthday! ✨</p>
+    </div>
+
+    <script>
+        document.getElementById("surprise-btn").addEventListener("click", function() {
+            gsap.to("#surprise-msg", {opacity: 1, y: -10, duration: 1, display: 'block'});
+        });
+    </script>
+</body>
+</html>
